@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/splash_bg"
+    tools:context=".product_view">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/text_bg"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="30dp"
+        android:scrollIndicators="none"
+        android:layout_marginBottom="5dp"
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_product_image"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="250dp"
+
+/>
+    <LinearLayout
+        android:id="@+id/product_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_product_image"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_product_name2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="5dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:background="@drawable/splash_bg_radius"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_product_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+
+
+            android:textColor="#2C2C2C"
+            android:textSize="12sp" />
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:layout_width="100dp"
+            android:id="@+id/number_button2"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            app:textSize="7sp"
+            app:finalNumber="60"
+            app:initialNumber="1"
+            app:backGroundColor="#64BA02"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/tv_product_price2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/exo"
+
+            android:textColor="#FA0202"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ratings &amp; Reviews"
+            android:textSize="15sp"
+            android:fontFamily="@font/coda"
+            android:textColor="@color/black"
+           />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_vertical"
+    android:layout_weight="0.7">
+            <TextView
+                android:id="@+id/average_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="?android:selectableItemBackground"
+                android:textColor="#333333"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="@+id/ratingBar"
+                app:layout_constraintHorizontal_bias="0.36"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar"
+                app:layout_constraintTop_toTopOf="@+id/rating_reviews" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@android:style/Widget.Material.Light.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:numStars="5"
+                android:progressTint="#000000"
+                android:rating="0"
+                android:stepSize="0.5"
+               />
+
+            <TextView
+                android:id="@+id/raters_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_person_black_18dp"
+               />
+
+
+</LinearLayout>
+            <com.taufiqrahman.reviewratings.RatingReviews xmlns:bar="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rating_reviews"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+android:layout_gravity="center_vertical"
+                bar:animation="true"
+                bar:layout_optimizationLevel="barrier"
+                bar:show_label="true"
+                bar:spaces="7dp"
+                bar:rounded="true"
+                bar:text_color="#808080"
+                bar:text_size="10sp"
+                bar:width="13dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Details"
+            android:textColor="#040000"
+            android:fontFamily="@font/coda"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_product_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:textColor="#636363"
+            android:maxLines="5"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_more_btn"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:text="show more..."
+            android:textColor="#040000"
+            android:textSize="14sp" />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+    </ScrollView>
+    <ImageButton
+        android:id="@+id/close_btn"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/greengradientbg"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_close_black_24dp"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:text="Add to Cart"
+        android:id="@+id/addtocart_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/greengradientbg"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

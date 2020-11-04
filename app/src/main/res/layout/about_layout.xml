@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_gravity="center_vertical"
+    android:background="@drawable/text_bg"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:civ_border_color="#000"
+    app:civ_border_width="3dp"
+    android:src="@drawable/ansar"
+    android:layout_margin="5dp"
+    />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_margin="5dp"
+            app:civ_border_color="#000"
+            app:civ_border_width="3dp"
+            android:src="@drawable/shuhaib"
+            android:layout_height="100dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Developed with Patience By"/>
+       />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/green_gradient_btn"
+        android:text="ANSAR | SHUHAIB\n\nmaxben26727@gmail.com\n9633191269\n\nshuhaibksd123@gmail.com\n8138045693"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+       />
+
+</LinearLayout>

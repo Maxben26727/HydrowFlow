@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/order_cardview"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp">
+        <ImageButton
+            android:id="@+id/item_view_btn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:elevation="8dp"
+            android:layout_marginBottom="45dp"
+            android:layout_gravity="right|top"
+            android:background="@drawable/view_icon_btn_bg"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:tint="@color/white"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/top_linear"
+            android:orientation="vertical">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_marginEnd="80dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/coda"
+                android:text="ORDERID:"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/orderid"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="80dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/coda"
+                android:text="OrderID:M3INO8XTUPJYUKBYBH"
+                android:textColor="#0A1120"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="80dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/coda"
+                android:text="29,mar,2020"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/track_btn"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:padding="3dp"
+                    android:drawableTint="@color/black"
+                    android:drawableStart="@drawable/ic_arrow_drop_down_circle_black_24dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/text_bg"
+                    android:text="Track"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/viewinvoice_btn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:drawableTint="@color/white"
+                android:drawableStart="@drawable/ic_assignment_black_24dp"
+                android:layout_margin="5dp"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:background="@drawable/green_gradient_btn"
+                android:elevation="4dp"
+                android:text="Invoice"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/track_layout"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/orderplacedlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/orderPlacedDone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/done"
+                        android:tint="#48FF05" />
+
+                    <ImageView
+                        android:id="@+id/orderPlacedicon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/order_placed" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="OrderPlaced"
+                        android:id="@+id/o_tv_1"
+                        android:textStyle="bold"
+                        android:textColor="#000" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/chain1"
+                    android:layout_below="@id/orderplacedlayout"
+                    android:src="@drawable/chain"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orderacceptedlayout"
+                    android:layout_below="@id/chain1"
+
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/done"
+
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/orderacceptedDone"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/accepted"
+                        android:tint="#747373"
+                        android:id="@+id/orderacceptedicon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OrderProcessing"
+                        android:id="@+id/o_tv_2"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/chain2"
+                    android:tint="#747373"
+                    android:layout_below="@id/orderacceptedlayout"
+                    android:src="@drawable/chain"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ordershippedlayout"
+                    android:layout_below="@id/chain2"
+
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/done"
+
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/ordershippingdDone"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/shipped"
+                        android:tint="#747373"
+                        android:id="@+id/ordershippedicon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="On the Way"
+                        android:id="@+id/o_tv_3"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/chain3"
+                    android:tint="#747373"
+                    android:layout_below="@id/ordershippedlayout"
+                    android:src="@drawable/chain"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orderdeliveredlayout"
+                    android:layout_below="@id/chain3"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/done"
+
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/orderdeliverydDone"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:tint="#747373"
+                        android:src="@drawable/delivered"
+                        android:id="@+id/orderdeliveredicon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivered"
+                        android:textStyle="bold"
+                        android:id="@+id/o_tv_4"
+                        android:layout_gravity="center_vertical"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:elevation="8dp"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/delete_icon_btn_bg"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:tint="@color/white"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
